@@ -15,7 +15,7 @@ body {
 
 /* Header styling */
 header {
-    background-color: #f4f4f4;
+    background-color: green;
     padding: 20px;
     text-align: center;
     grid-area: header;
