@@ -1,0 +1,226 @@
+/* Mobile-first styles (default for mobile devices) */
+
+/* Basic page layout */
+/* Apply the Google Fonts */
+/* Base styles for navigation */
+nav {
+    position: relative;
+}
+
+ul.nav-menu {
+    display: none; /* Hide navigation on mobile */
+    flex-direction: column;
+    background-color: #264653;
+    position: absolute;
+    top: 60px; /* Adjust to align with the height of your header */
+    width: 100%;
+    left: 0;
+    text-align: center;
+    padding: 0;
+}
+
+ul.nav-menu li {
+    list-style: none;
+    margin: 0;
+}
+
+ul.nav-menu li a {
+    padding: 1rem;
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color: #264653;
+    border-bottom: 1px solid #2a9d8f;
+}
+
+ul.nav-menu li a:hover {
+    background-color: #2a9d8f;
+}
+
+/* Hamburger menu button */
+.hamburger {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    display: block;
+    margin-right: 1rem;
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+
+/* Hide the hamburger button on larger screens */
+@media screen and (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+
+    /* Show the nav menu as a horizontal list on larger screens */
+    ul.nav-menu {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: transparent;
+    }
+
+    ul.nav-menu li a {
+        background-color: transparent;
+        border: none;
+        color: white;
+        padding: 1rem;
+    }
+
+    ul.nav-menu li a:hover {
+        background-color: #2a9d8f;
+    }
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Body font */
+}
+
+/* Header styling */
+header h1 {
+    font-family: 'Merriweather', serif; /* Heading font */
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #2a9d8f;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #264653;
+}
+
+nav ul li {
+    flex: 1;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+    text-align: center;
+}
+
+nav ul li a:hover {
+    background-color: #2a9d8f;
+}
+
+/* Main content area */
+main {
+    padding: 1rem;
+    text-align: center;
+}
+
+main h2 {
+    margin-bottom: 1rem;
+}
+
+/* Image gallery */
+figure {
+    margin: 1rem auto;
+    text-align: center;
+    max-width: 100%;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+/* Styling for the temple cards */
+.temple-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Temple container styling */
+.temple-container {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 column by default (mobile-first) */
+    gap: 1rem; /* Gap between the cards */
+    padding: 1rem;
+  }
+
+/* On larger screens, display in two columns */
+@media screen and (min-width: 768px) {
+    .temple-container {
+      grid-template-columns: 1fr 1fr; /* 2 columns for screens wider than 768px */
+    }
+}
+
+.temple-card h3 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.temple-card p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #555;
+    margin: 0.5rem 0;
+}
+
+.temple-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.show {
+    display: block;
+}
+
+/* Footer styling */
+footer {
+    background-color: #264653;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* Responsive design: tablet and above, handled by a separate stylesheet */

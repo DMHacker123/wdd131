@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Full Screen Photo Layout</title>
+    
+        <!-- Critical CSS inlined -->
+        <style>
+            :root {
+                --swiss-red: #D52B1E;
+                --white: #FFFFFF;
+                --dark-gray: #333333;
+            }
+            body, html {
+                height: 100%;
+                font-family: 'Roboto', sans-serif;
+                color: var(--dark-gray);
+            }
+            header {
+                background-color: var(--swiss-red);
+                color: var(--white);
+                padding: 20px 0;
+                text-align: center;
+            }
+            header h1 {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 2.5em;
+                margin: 0 0 10px 0;
+            }
+        </style>
+    
+        <!-- Non-critical CSS -->
+        <link rel="stylesheet" href="styles/place.css" media="print" onload="this.media='all'">
+        <noscript><link rel="stylesheet" href="styles/place.css"></noscript>
+    
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@500&display=swap" rel="stylesheet"> 
+    </head>
+    
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Zwitzerland Webpage</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Full Screen Photo Section with Positioned Components -->
+    <div class="photo-container">
+        <img src="images/landscape.jpg.webp" alt="A beautiful landscape view" class="big-photo">
+
+        <!-- Info Box 1 in the top right -->
+        <div class="info-box top-right">
+            <div class="colored-div">
+            <h2>Data</h2>
+            </div>
+            <p>Area: 568,587 km2</p>
+            <p>Population: 87,458</p>
+            <p>Capital: Bern</p>
+            <p>Language: French</p>
+        </div>
+
+        <!-- Info Box 2 in the bottom left -->
+        <div class="info-box bottom-left">
+            <div class="colored-div">
+                <h2>Weather <img src="images/667368_celcius_clouds_farenheit_sunshine_temerature_icon.png" alt="icon" class="icon"></h2> <!-- Icon and heading -->
+            </div>
+            <p>Temperature: 18°C</p>
+            <p>Condition: Sunny</p>
+            <p>Wind: 2 km/h</p>
+            <p id="windchill">Wind Chill: Calculating...</p> <!-- Placeholder for the wind chill -->
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <!-- Footer -->
+<footer>
+    <p>&copy; <span id="current-year"></span> Your Website | All Rights Reserved</p>
+    <p>Photo from <a href="https://www.pexels.com/" target="_blank">Pexels</a></p>
+    <p>Last modified: <span id="last-modified"></span></p>
+</footer>
+
+<!-- Load JavaScript after DOM has been parsed -->
+<script src="scripts/place.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,217 @@
+:root {
+    /* Color Variables */
+    --swiss-red: #D52B1E;          /* Swiss flag red */
+    --white: #FFFFFF;              /* White */
+    --dark-gray: #333333;          /* Dark gray for text */
+    --light-gray: #F2F2F2;         /* Light gray for backgrounds */
+    --text-gray: #555555;          /* Lighter gray for body text */
+
+    /* Font Variables */
+    --body-font: 'Roboto', sans-serif;        /* Body font */
+    --heading-font: 'Montserrat', sans-serif; /* Heading font */
+}
+
+/* General Styles */
+body, html {
+    height: 100%;
+    font-family: var(--body-font);
+    color: var(--dark-gray);
+}
+
+/* Header Styles */
+header {
+    width: 100%;
+    background-color: var(--swiss-red);
+    color: var(--white);
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-family: var(--heading-font);
+    font-size: 2.5em;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Fullscreen Photo Container */
+.photo-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+.big-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Info Box Styles */
+.info-box {
+    position: absolute;
+    width: 200px;
+    padding: 15px; /* Padding for the entire box */
+    padding-top: 50px; /* Extra space for the colored header */
+    background-color: rgba(255, 255, 255, 0.8); /* White */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    z-index: 5;
+}
+
+/* Positioning the Info Boxes */
+.top-right {
+    top: 20px;
+    right: 20px;
+}
+
+.bottom-left {
+    bottom: 20px;
+    left: 20px;
+}
+
+.info-box h2 {
+    margin-bottom: 10px;
+    color: var(--dark-gray);
+    font-family: var(--heading-font);
+    font-size: 1.5em;
+}
+
+.info-box p {
+    color: var(--text-gray);
+}
+
+/* Colored Heading in Info Box */
+.colored-div {
+    position: absolute;
+    left: -10px;
+    top: -20px;
+    background-color: var(--swiss-red);
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.colored-div h2 {
+    margin: 0;
+    color: var(--white);
+    font-size: 1.5em;
+    font-family: var(--heading-font);
+    padding-left: 0;
+    position: relative; /* Needed for pseudo-element positioning */
+}
+
+/* Pseudo-element for the weather icon in large viewports */
+@media (min-width: 768px) {
+    .colored-div h2::after {
+        content: '';
+        display: inline-block;
+        background-image: url('images/667368_celcius_clouds_farenheit_sunshine_temerature_icon.png'); /* Add the path to your icon here */
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 30px; /* Icon size */
+        height: 30px;
+        margin-left: 10px; /* Spacing between text and icon */
+        vertical-align: middle;
+    }
+}
+
+
+.colored-div img {
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+/* Weather Section */
+.weather-container {
+    position: relative;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for contrast */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.weather-heading {
+    font-family: var(--heading-font);
+    font-size: 1.5em;
+    color: var(--dark-gray);
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Vertically center the text and icon */
+}
+
+.weather-icon {
+    margin-left: 10px; /* Space between the text and the icon */
+    width: 30px; /* Adjust icon size */
+    height: 30px;
+}
+
+@media (max-width: 768px) {
+    .info-box {
+        width: 90%; /* Full width on small screens */
+        left: 50%;
+        transform: translateX(-50%); /* Centering the box */
+    }
+}
+
+.weather-container {
+    font-size: 0.9em; /* Adjust font size on smaller screens */
+}
+
+.info-box:hover {
+    background-color: rgba(255, 255, 255, 1); /* Change background */
+    transform: scale(1.05); /* Slight zoom effect */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+/* Footer Styles */
+footer {
+    width: 100%;
+    background-color: var(--swiss-red);
+    color: var(--white);
+    padding: 15px 0;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

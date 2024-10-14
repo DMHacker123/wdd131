@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Object basics: Task 2</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    let bandInfo = {
+      name: "The Rolling Stones",
+      genre: "Rock",
+      nationality: "British",
+      numberOfMembers: 4,
+      formed: 1962,
+      split: false,
+      members: [
+        { name: "Mick Jagger", role: "Lead Vocals" },
+        { name: "Keith Richards", role: "Guitar" },
+        { name: "Charlie Watts", role: "Drums" },
+        { name: "Ronnie Wood", role: "Guitar" }
+      ],
+      albums: [ // Updated albums to be an array of objects
+        { name: "Let It Bleed", released: 1969 },
+        { name: "Sticky Fingers", released: 1971 },
+        { name: "Exile on Main St.", released: 1972 }
+      ]
+    };
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+    let para1 = document.createElement('p');
+    para1.textContent = `Band: ${bandInfo.name}, Genre: ${bandInfo.genre}, Nationality: ${bandInfo.nationality}, Number of Members: ${bandInfo.numberOfMembers}, Formed: ${bandInfo.formed}, Split: ${bandInfo.split}`; // Included split
+    section.appendChild(para1);
+
+    let para2 = document.createElement('p');
+    para2.textContent = "Members:";
+    section.appendChild(para2);
+
+    bandInfo.members.forEach(member => {
+      let para = document.createElement('p');
+      para.textContent = `${member.name} - ${member.role}`;
+      section.appendChild(para);
+    });
+
+    let para3 = document.createElement('p');
+    para3.textContent = "Albums:";
+    section.appendChild(para3);
+
+    bandInfo.albums.forEach(album => {
+      let para = document.createElement('p');
+      para.textContent = `${album.name} (Released: ${album.released})`; // Display album name and release year
+      section.appendChild(para);
+    });
+  </script>
+
+</html>

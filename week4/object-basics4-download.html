@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Object Basics: Task 4</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+      <h1>Cat Greetings</h1>
+      <div id="greetings"></div>
+    </section>
+
+    <script>
+      // Constructor function for Cat
+      function Cat(name, breed, color) {
+        this.name = name;
+        this.breed = breed;
+        this.color = color;
+
+        // Each instance has its own greeting method
+        this.greeting = function() {
+          return `Hello, said ${this.name} the ${this.breed}.`;
+        };
+      }
+
+      // Create cat instances
+      const cat1 = new Cat('Bertie', 'Cymric', 'white');
+      const cat2 = new Cat('Elfie', 'Aphrodite Giant', 'ginger');
+
+      // Display the greetings on the webpage
+      const greetingsDiv = document.getElementById('greetings');
+      greetingsDiv.innerHTML += `<p>${cat1.greeting()}</p>`;
+      greetingsDiv.innerHTML += `<p>${cat2.greeting()}</p>`;
+    </script>
+
+  </body>
+</html>

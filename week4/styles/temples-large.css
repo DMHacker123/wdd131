@@ -1,0 +1,109 @@
+/* Desktop view: Applied for devices with a min-width of 1024px */
+
+/* Page layout */
+/* Apply the Google Fonts */
+body {
+    font-family: 'Roboto', sans-serif; /* Body font */
+}
+
+/* Header styling */
+header h1 {
+    font-family: 'Merriweather', serif; /* Heading font */
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the content on larger screens */
+}
+
+header {
+    background-color: #2a9d8f;
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem; /* Increase font size for larger screens */
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem; /* Space between navigation items */
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+nav ul li a:hover {
+    background-color: #1d6f6d;
+}
+
+/* Main content */
+main {
+    padding: 2rem;
+    text-align: left; /* Align text to the left for readability on larger screens */
+}
+
+main h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Image gallery: make it a grid */
+section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+    gap: 2rem; /* Spacing between grid items */
+}
+
+figure {
+    text-align: center;
+    margin: 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+figcaption {
+    background-color: #f4f4f4;
+    padding: 0.5rem;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+/* Footer styling */
+footer {
+    background-color: #264653;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}

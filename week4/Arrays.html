@@ -1,0 +1,13 @@
+// Array of steps
+const steps = ["one", "two", "three"];
+
+// Template function to generate the HTML string for each step
+const listTemplate = (step) => {
+  return `<li>${step}</li>`;
+};
+
+// Use map to convert the steps array into an array of HTML strings, and join them into one string
+const stepsHtml = steps.map(listTemplate).join("");
+
+// Set the innerHTML of the ul element with the generated HTML string
+document.querySelector("#myList").innerHTML = stepsHtml;
