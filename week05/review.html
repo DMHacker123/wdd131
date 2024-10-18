@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Review Submitted</title>
+</head>
+<body>
+    <header>
+        <h1>Review Submitted</h1>
+    </header>
+
+    <main>
+        <p>Thank you for submitting your review!</p>
+
+        <!-- Display the submitted data -->
+        <p><strong>Product:</strong> <span id="product-name"></span></p>
+        <p><strong>Rating:</strong> <span id="product-rating"></span></p>
+        <p><strong>Date of Installation:</strong> <span id="install-date"></span></p>
+        <p><strong>Useful Features:</strong> <span id="useful-features"></span></p>
+        <p><strong>Your Review:</strong> <span id="user-review"></span></p>
+        <p><strong>Submitted by:</strong> <span id="user-name"></span></p>
+
+        <!-- Show review count -->
+        <p>You have submitted <span id="review-count">0</span> reviews.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Darwin Matos | WDD 131 | All Rights Reserved</p>
+        <p>Last updated: October 2024</p>
+    </footer>
+
+    <script>
+        // Function to get URL parameters and convert them to a JavaScript object
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            const queryParams = {};
+            for (const [key, value] of params.entries()) {
+                if (queryParams[key]) {
+                    // If the key already exists, convert it into an array to handle multiple values (e.g., for features)
+                    if (!Array.isArray(queryParams[key])) {
+                        queryParams[key] = [queryParams[key]];
+                    }
+                    queryParams[key].push(value);
+                } else {
+                    queryParams[key] = value;
+                }
+            }
+            return queryParams;
+        }
+
+        // Extract form data from the URL
+        const formData = getQueryParams();
+
+        // Function to handle array-like features (multiple checkboxes)
+        function displayFeatures(features) {
+            if (Array.isArray(features)) {
+                return features.join(", "); // Display multiple features as a comma-separated string
+            }
+            return features || 'N/A'; // Display the single feature or 'N/A' if none
+        }
+
+        // Update the HTML with the form data
+        document.getElementById('product-name').textContent = formData.product || 'N/A';
+        document.getElementById('product-rating').textContent = formData.rating || 'N/A';
+        document.getElementById('install-date').textContent = formData['install-date'] || 'N/A';
+        document.getElementById('useful-features').textContent = displayFeatures(formData.features);
+        document.getElementById('user-review').textContent = formData.review || 'No review provided';
+        document.getElementById('user-name').textContent = formData['user-name'] || 'Anonymous';
+
+        // Get and update review count from localStorage
+        let reviewCount = localStorage.getItem('reviewCount');
+        if (!reviewCount) {
+            reviewCount = 0;
+        }
+        reviewCount++;
+        localStorage.setItem('reviewCount', reviewCount);
+        document.getElementById('review-count').textContent = reviewCount;
+    </script>
+</body>
+</html>

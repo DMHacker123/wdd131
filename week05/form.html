@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product Review Form</title>
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+    <header>
+        <h1>Product Review Form</h1>
+    </header>
+
+    <main>
+        <form method="get" action="review.html">
+            <!-- Product Name -->
+            <div class="form-group">
+                <label for="product-select">Product Name:</label>
+                <select id="product-select" name="product" required>
+                    <option value="" disabled selected>Select a Product ...</option>
+                </select>
+            </div>
+
+            <!-- Product Rating -->
+            <fieldset class="form-group">
+                <legend>Overall Product Rating (1 to 5 stars):</legend>
+                <label for="rating-1">
+                    <input type="radio" id="rating-1" name="rating" value="1" required> 1 Star
+                </label>
+                <label for="rating-2">
+                    <input type="radio" id="rating-2" name="rating" value="2"> 2 Stars
+                </label>
+                <label for="rating-3">
+                    <input type="radio" id="rating-3" name="rating" value="3"> 3 Stars
+                </label>
+                <label for="rating-4">
+                    <input type="radio" id="rating-4" name="rating" value="4"> 4 Stars
+                </label>
+                <label for="rating-5">
+                    <input type="radio" id="rating-5" name="rating" value="5"> 5 Stars
+                </label>
+            </fieldset>
+
+            <!-- Date of Installation -->
+            <div class="form-group">
+                <label for="install-date">Date of Installation:</label>
+                <input type="date" id="install-date" name="install-date" required>
+            </div>
+
+            <!-- Useful Features -->
+            <fieldset>
+                <legend>Useful Features (Check all that apply)</legend>
+                <label for="durability">
+                    <input type="checkbox" id="durability" name="features" value="Durability"> Durability
+                </label>
+                <label for="performance">
+                    <input type="checkbox" id="performance" name="features" value="Performance"> Performance
+                </label>
+                <label for="design">
+                    <input type="checkbox" id="design" name="features" value="Design"> Design
+                </label>
+            </fieldset>
+
+            <!-- Written Review -->
+            <div class="form-group">
+                <label for="review">Written Review (Optional):</label>
+                <textarea id="review" name="review" placeholder="Write your review here..."></textarea>
+            </div>
+
+            <!-- User Name -->
+            <div class="form-group">
+                <label for="user-name">User Name (Optional):</label>
+                <input type="text" id="user-name" name="user-name" placeholder="Your Name">
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <input type="submit" value="Submit Review">
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Darwin Matos | WDD 131 | All Rights Reserved</p>
+        <p>Last updated: October 2024</p>
+    </footer>
+
+    <script src="scripts/form.js"></script>
+</body>
+</html>
