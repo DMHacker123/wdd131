@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Art of Minimalist Living - Your guide to adopting a minimalist lifestyle with tips on decluttering, sustainability, mindfulness, and community stories.">
+    <title>The Art of Minimalist Living</title>
+    <link rel="stylesheet" href="style/siteplan.css"> <!-- Link to the shared CSS file -->
+</head>
+<body>
+
+    <header>
+        <h1>The Art of Minimalist Living</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="siteplan.html" aria-current="page">Home</a></li>
+            <li><a href="decluttering.html">Decluttering Tips</a></li>
+            <li><a href="mindfulness.html">Mindfulness & Well-being</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section>
+            <h2>What is Minimalism?</h2>
+            <img src="images/64d47984a8c503.30744397.webp" alt="Minimalist living space with clean, simple design" loading="lazy">
+
+            <p>Minimalism is a lifestyle that encourages us to focus on what truly matters by reducing clutter in our lives, both physically and mentally. By living with less, we create more room for experiences, creativity, and well-being.</p>
+        </section>
+
+        <section>
+            <h2>Purpose of the Site</h2>
+            <p>The Art of Minimalist Living serves as a comprehensive guide for individuals interested in adopting a minimalist lifestyle. It offers insights into the principles and benefits of minimalism, practical decluttering tips, sustainable living insights, mindfulness and well-being resources, community engagement through real-life stories, and curated resources to support users on their minimalist journey.</p>
+            <p>This site encourages user interaction through a contact form and newsletter subscriptions, aiming to inspire and guide individuals in simplifying their lives and finding more meaning in everyday experiences.</p>
+        </section>
+        
+        <p><strong>Why "The Art of Minimalist Living"?</strong></p>
+        <p>This site serves as a comprehensive guide to embracing a minimalist lifestyle. Visitors will find:</p>
+        <ul>
+            <li>Introduction to minimalism, its key principles, and the benefits of living with less.</li>
+            <li>Practical tips on decluttering physical and digital spaces, with interactive tools like checklists and progress trackers.</li>
+            <li>Insights into sustainable living, eco-friendly practices, and mindful consumption habits.</li>
+            <li>Resources to improve mental well-being through mindfulness and simplicity.</li>
+            <li>Real-life stories and interviews with individuals who have adopted minimalism, providing personal insights and advice.</li>
+            <li>A curated collection of books, podcasts, and apps to support visitors on their minimalist journey.</li>
+        </ul>
+    
+        <section>
+            <h2>Why Choose Minimalism?</h2>
+            <p>People around the world are embracing minimalism to declutter their homes, simplify their schedules, and find joy in the essentials. Minimalism isn’t just about having fewer things—it’s about intentionality and aligning your life with your values.</p>
+        </section>
+    
+        <section>
+            <h2>Explore the Guide</h2>
+            <p>Ready to take the next step? Learn how to declutter your home, practice mindfulness, and connect with a like-minded community. Click the links in the navigation to get started!</p>
+        </section>
+
+        <p><strong>Visitor Scenarios:</strong></p>
+        <ul>
+            <li><strong>Scenario 1:</strong> <em>How do I start decluttering my home without feeling overwhelmed?</em></li>
+            <p>This question will guide our content on decluttering tips, providing visitors with practical, step-by-step guidance on how to start organizing their physical spaces without stress.</p>
+
+            <li><strong>Scenario 2:</strong> <em>How can minimalism improve my mental well-being?</em></li>
+            <p>In response to this scenario, the site will explore the connection between minimalism and mental clarity, offering resources on mindfulness and how reducing clutter can lead to less stress and greater focus.</p>
+        </ul>
+
+        <p>Through these offerings, "The Art of Minimalist Living" aims to inspire and guide individuals looking to simplify their lives and find more meaning in everyday experiences.</p>
+
+        <section>
+            <h2>We'd love to hear from you!</h2>
+            <form action="submit_form.php" method="post"> <!-- Action points to the server-side script -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <fieldset>
+                    <legend>How did you hear about us?</legend>
+                    <label><input type="radio" name="referral" value="friend" required> A Friend</label>
+                    <label><input type="radio" name="referral" value="social_media"> Social Media</label>
+                    <label><input type="radio" name="referral" value="search_engine"> Search Engine</label>
+                    <label><input type="radio" name="referral" value="other"> Other</label>
+                </fieldset>
+
+                <label for="subscribe">
+                    <input type="checkbox" id="subscribe" name="subscribe">
+                    Subscribe to our newsletter
+                </label>
+
+                <button id="sendButton" type="submit">Send Message</button>
+                <button type="reset" onclick="resetForm()">Reset</button> <!-- Calls the resetForm function -->
+            </form>
+        </section>
+        
+    </main>
+    <script src="script/siteplan.js"></script>
+</body>
+<footer>
+    <p>&copy; 2024 The Art of Minimalist Living | 
+        <a href="mailto:contact@minimalistliving.com">Contact Us</a> | 
+        <a href="attributions.html">Resource Attributions</a>
+    </p>
+</footer>
+
+</html>

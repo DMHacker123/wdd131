@@ -1,0 +1,223 @@
+/* Importing a custom font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif; /* Changed to Google Font */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light gray background for contrast */
+    color: #333;
+}
+
+header {
+    background-color: #2E8B57; /* Dark green header */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body, header, main, footer {
+    margin: 0;
+    padding: 0;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #fff; /* White text for header */
+    margin: 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff; /* White background for main content */
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Deeper shadow */
+}
+
+img {
+    display: block; /* Changes the image to a block element */
+    margin-left: auto; /* Automatically adjusts left margin */
+    margin-right: auto; /* Automatically adjusts right margin */
+    width: 50%; /* Makes the image responsive */
+    height: auto; /* Maintains the aspect ratio */
+    border: 2px solid #ccc; /* Adds a border */
+    border-radius: 8px; /* Rounds the corners */
+    transition: transform 0.2s; /* Smooth transition */
+}
+
+img:hover {
+    transform: scale(1.1); /* Scales the image up on hover */
+}
+
+@media (max-width: 600px) {
+    img {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+p, ul {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+ul li {
+    margin-top: 10px;
+    color: #2E8B57; /* Dark green text for list items */
+}
+
+p {
+    color: #333;
+}
+
+/* Styling the Navigation Bar */
+nav {
+    background-color: #2E8B57; /* Dark green background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+nav ul {
+    list-style-type: none; /* Remove default bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center the navigation items */
+}
+
+nav ul li {
+    margin: 0 15px; /* Space between links */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #fff; /* White text for contrast */
+    font-size: 1.2rem; /* Increase font size */
+    padding: 15px 20px; /* Add some padding for better clickability */
+    display: inline-block;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease; /* Added transform */
+}
+
+nav ul li a:hover {
+    background-color: #3CB371; /* Lighter green on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Ensure all form elements align */
+    gap: 15px;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Add spacing between vertical links */
+    }
+
+    main {
+        padding: 10px; /* Adjust padding for main on smaller screens */
+    }
+}
+
+@media (max-width: 1024px) {
+    main {
+        padding: 15px;
+    }
+}
+
+/* Form styles */
+form {
+    display: flex; /* Flexbox layout for form */
+    flex-direction: column; /* Stack elements vertically */
+    gap: 15px; /* Spacing between elements */
+}
+
+label {
+    margin-bottom: 5px; /* Space below labels */
+    font-weight: bold; /* Bold text for labels */
+    color: #2E8B57; /* Dark green for labels */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px; /* Padding for inputs */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 1rem; /* Font size for inputs */
+    transition: border-color 0.3s; /* Smooth transition for focus effect */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #2E8B57; /* Dark green border on focus */
+    outline: none; /* Remove default outline */
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #aaa; /* Light gray for placeholder */
+    opacity: 1; /* Ensure it's visible */
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing only */
+}
+
+fieldset {
+    border: none; /* Remove default border */
+    padding: 10px; /* Padding inside fieldset */
+    background-color: #f9f9f9; /* Light background for fieldset */
+    border-radius: 4px; /* Rounded corners */
+}
+
+legend {
+    font-weight: bold; /* Bold text for legend */
+    color: #2E8B57; /* Dark green for legend */
+}
+
+button {
+    padding: 12px 20px; /* Padding for button */
+    background-color: #2E8B57; /* Dark green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 1.1rem; /* Font size for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+button:hover {
+    background-color: #245f42; /* Darker shade on hover */
+}
+
+button:focus {
+    outline: 2px solid #3CB371; /* Add a focus outline */
+}
+
+a:focus, input:focus, button:focus {
+    outline: 3px dashed #3CB371; /* Adds a clear focus indicator */
+}
+
+
+/* Footer styles */
+footer {
+    text-align: center; /* Center footer text */
+    padding: 20px;
+    background-color: #2E8B57; /* Dark green footer */
+    color: white; /* White text for footer */
+    margin-top: 20px; /* Space above footer */
+}

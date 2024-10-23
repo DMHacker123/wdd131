@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore how minimalist living enhances mindfulness and mental well-being. Learn techniques for stress reduction and improved focus.">
+    <title>Mindfulness & Well-being - The Art of Minimalist Living</title>
+    <link rel="stylesheet" href="style/siteplan.css"> <!-- Link to the shared CSS file -->
+</head>
+<body>
+
+    <header>
+        <h1>The Art of Minimalist Living</h1>
+    </header>
+
+    <nav aria-label="Main Navigation">
+        <ul>
+            <li><a href="siteplan.html" aria-label="Navigate to Home">Home</a></li>
+            <li><a href="decluttering.html" aria-label="Navigate to Decluttering Tips">Decluttering Tips</a></li>
+            <li><a href="mindfulness.html" aria-label="Navigate to Mindfulness & Well-being">Mindfulness & Well-being</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Mindfulness & Well-being</h2>
+        <img src="images/psychology-new-age-spirituality.jpg" alt="Emotional well-being" loading="lazy">
+
+        <p>Minimalism isn’t just about physical decluttering. It’s also about mental clarity and emotional well-being. Here’s how minimalism can help you focus on what’s important:</p>
+        
+        <ul>
+            <li><strong>Focus on the Present:</strong> By removing distractions, you can focus on the present moment and increase mindfulness.</li>
+            <li><strong>Less Clutter, Less Stress:</strong> A clutter-free environment contributes to a clearer mind and reduced stress levels.</li>
+            <li><strong>Meditation & Minimalism:</strong> Practicing mindfulness meditation can complement your minimalist journey. Start with just five minutes a day.</li>
+            <li><strong>Prioritize Well-being:</strong> Minimalism allows you to focus on self-care, relationships, and hobbies that bring you joy.</li>
+        </ul>
+
+        <section>
+            <h2>Why Mindfulness Matters</h2>
+            <p>Minimalism isn’t just about decluttering your home—it’s about decluttering your mind. By practicing mindfulness, you can learn to focus on what truly matters, reduce stress, and live more intentionally.</p>
+        </section>
+    
+        <section>
+            <h2>Daily Mindfulness Practices</h2>
+            <p>Start small by incorporating mindfulness into your daily routine. Take a few minutes each morning to sit quietly, breathe deeply, and set intentions for the day. During meals, practice mindful eating by focusing on the flavors, textures, and sensations of each bite.</p>
+        </section>
+    
+        <section>
+            <h2>Mental Decluttering</h2>
+            <p>Our minds can become cluttered with thoughts, worries, and distractions. Practice mental decluttering by writing down to-do lists, setting clear priorities, and allowing time for rest and relaxation.</p>
+        </section>
+
+        <!-- Interactive Meditation Timer -->
+        <section>
+            <h2>5-Minute Guided Meditation</h2>
+            <p>Take a few moments to breathe and clear your mind. Use the timer below to start a short, focused meditation session:</p>
+            <button onclick="startTimer()" aria-label="Start meditation timer">Start 5-Minute Meditation</button>
+            <p id="timer-display">5:00</p>
+        </section>
+
+        <script>
+            function startTimer() {
+                let timeLeft = 300; // 5 minutes in seconds
+                const timerDisplay = document.getElementById('timer-display');
+
+                const timerInterval = setInterval(() => {
+                    const minutes = Math.floor(timeLeft / 60);
+                    const seconds = timeLeft % 60;
+
+                    timerDisplay.textContent = `${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+                    timeLeft--;
+
+                    if (timeLeft < 0) {
+                        clearInterval(timerInterval);
+                        timerDisplay.textContent = "Session Complete";
+                    }
+                }, 1000);
+            }
+        </script>
+
+        <p>Explore more ways to live mindfully by downloading our free <a href="#" aria-label="Download the meditation guide">meditation guide</a> and resources on improving mental clarity.</p>
+    </main>
+
+</body>
+<footer>
+    <p>&copy; 2024 The Art of Minimalist Living | 
+        <a href="mailto:contact@minimalistliving.com">Contact Us</a> | 
+        <a href="attributions.html">Resource Attributions</a>
+    </p>
+</footer>
+
+
+</html>
