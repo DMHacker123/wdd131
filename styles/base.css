@@ -6,9 +6,6 @@ body {
     color: #333333; /* Dark gray for readability */
     background-color: #f4f4f4; /* Light background for good contrast */
     line-height: 1.5; /* Good line height for readability */
-    font-family: 'Roboto', sans-serif;
-    color: #333333;
-    background-color: #f4f4f4;
 }
 
 /* Header Styling */
@@ -33,10 +30,13 @@ nav ul li a {
     color: #ffffff;
     text-decoration: none;
     font-size: 1.2rem;
+    padding: 8px 12px; /* Improved padding for usability */
 }
 
-nav ul li a:hover {
-    color: #ff6600; /* Accent color for hover effect */
+nav ul li a:hover,
+nav ul li a:focus { /* Improved usability with focus state */
+    color: #ff6600; /* Accent color for hover and focus effects */
+    outline: none;
 }
 
 /* Main Content Styling */
@@ -44,7 +44,7 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
     padding: 20px;
-    gap: 20px; /* Space between grid items */   
+    gap: 20px; /* Space between grid items */
     background-color: white; /* White content background for contrast */
     margin: 20px auto;
     max-width: 1000px;
@@ -59,10 +59,12 @@ main {
     border: 1px solid #ddd; /* Light border */
     border-radius: 8px;
     background-color: #ffffff; /* Maintain contrast inside cards */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Added shadow for depth */
 }
 
 .card h2 {
     color: #0044cc; /* Primary color for headings */
+    margin-top: 0;
 }
 
 .card img {
