@@ -77,9 +77,14 @@ main {
 .profile-photo {
     float: right;
     width: 80px;
-    height: 140px;
+    height: 100px;
 }
 
+.project-photo {
+    float: right;
+    width: 140px;
+    height: 160px;
+}
 /* Footer Styling */
 footer {
     background-color: #0044cc;
