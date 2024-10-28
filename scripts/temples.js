@@ -1,34 +1,25 @@
-// temples.js
-
 document.addEventListener('DOMContentLoaded', function() {
     const hamburgerButton = document.getElementById('hamburgerButton');
     const navMenu = document.getElementById('navMenu');
 
+    // Toggle the navigation menu visibility and icon
     hamburgerButton.addEventListener('click', function() {
         navMenu.classList.toggle('show');
+        // Toggle the icon between ☰ and ✖
+        hamburgerButton.textContent = navMenu.classList.contains('show') ? '✖' : '☰';
     });
+
+    function updateFooter() {
+        const currentYearElement = document.getElementById('currentYear');
+        if (currentYearElement) {
+            currentYearElement.textContent = new Date().getFullYear();
+        }
+
+        const lastModifiedElement = document.getElementById('last-modified');
+        if (lastModifiedElement) {
+            lastModifiedElement.textContent = document.lastModified;
+        }
+    }
+
+    updateFooter();
 });
-
-
-
-function updateFooter() {
-    // Get the current year and display it
-    const currentYearElement = document.getElementById('current-year');
-    if (currentYearElement) {  // Check if element exists
-        const currentYear = new Date().getFullYear();
-        currentYearElement.textContent = currentYear;
-    }
-
-    // Get the last modified date of the page
-    const lastModifiedElement = document.getElementById('last-modified');
-    if (lastModifiedElement) {  // Check if element exists
-        const lastModifiedDate = document.lastModified;
-        lastModifiedElement.textContent = lastModifiedDate;
-    }
-}
-
-
-updateFooter();
-alert('JavaScript is working!');
-
-

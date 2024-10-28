@@ -51,6 +51,80 @@ ul.nav-menu li a:hover {
     top: 10px;
 }
 
+/* Default: hide the nav menu and show the hamburger button */
+.hamburger-menu {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+#navMenu {
+    display: none; /* Hide navigation on mobile initially */
+    flex-direction: column;
+    background-color: #264653;
+    position: absolute;
+    top: 60px; /* Adjust to align with header height */
+    width: 100%;
+    left: 0;
+    text-align: center;
+    padding: 0;
+}
+
+#navMenu.show {
+    display: flex; /* Show menu when .show class is added */
+}
+
+/* Navigation items for mobile */
+#navMenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navMenu ul li a {
+    padding: 1rem;
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color: #264653;
+    border-bottom: 1px solid #2a9d8f;
+}
+
+#navMenu ul li a:hover {
+    background-color: #2a9d8f;
+}
+
+/* Larger screens: hide hamburger, show horizontal menu */
+@media screen and (min-width: 768px) {
+    .hamburger-menu {
+        display: none; /* Hide hamburger button on larger screens */
+    }
+    #navMenu {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+    }
+    #navMenu ul {
+        display: flex;
+        justify-content: space-around;
+    }
+    #navMenu ul li a {
+        background-color: transparent;
+        color: white;
+        padding: 1rem;
+    }
+    #navMenu ul li a:hover {
+        background-color: #2a9d8f;
+    }
+}
+
 /* Hide the hamburger button on larger screens */
 @media screen and (min-width: 768px) {
     .hamburger {
@@ -139,6 +213,50 @@ main {
 main h2 {
     margin-bottom: 1rem;
 }
+
+/* Gallery section */
+section {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column on small screens */
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Responsive layout for larger screens */
+@media (min-width: 600px) {
+    section {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    section {
+        grid-template-columns: repeat(3, 1fr); /* Three columns on large screens */
+    }
+}
+
+/* Style for each figure */
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-style: italic;
+    color: #333;
+}
+
 
 /* Image gallery */
 figure {
