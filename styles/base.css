@@ -74,6 +74,12 @@ main {
     margin-bottom: 10px;
 }
 
+.profile-photo {
+    float: right;
+    width: 80px;
+    height: 140px;
+}
+
 /* Footer Styling */
 footer {
     background-color: #0044cc;
