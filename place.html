@@ -48,6 +48,17 @@
         <!-- Full Screen Photo Section with Positioned Components -->
         <div class="photo-container">
             <img src="images/landscape.jpg.webp" alt="A beautiful landscape view" class="big-photo">
+            <img 
+    src="images/landscape.jpg.webp" 
+    alt="A beautiful landscape view" 
+    class="big-photo" 
+    srcset="
+        images/landscape-small.jpg.webp 600w, 
+        images/landscape-medium.jpg.webp 1200w, 
+        images/landscape-large.jpg.webp 1800w" 
+    sizes="(max-width: 600px) 100vw, 
+           (max-width: 1200px) 50vw, 
+           33vw">
 
             <!-- Info Box 1 in the top right -->
             <div class="info-box top-right">
