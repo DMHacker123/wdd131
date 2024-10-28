@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Full Screen Photo Layout</title>
-    
-        <!-- Non-critical CSS -->
-        <link rel="stylesheet" href="styles/place.css" media="print" onload="this.media='all'">
-        <noscript><link rel="stylesheet" href="styles/place.css"></noscript>
-    
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@500&display=swap" rel="stylesheet"> 
-    </head>
-    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Full Screen Photo Layout</title>
+
+    <!-- Non-critical CSS -->
+    <link rel="stylesheet" href="styles/place.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="styles/place.css"></noscript>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
 <body>
 
     <!-- Header Section -->
@@ -35,9 +38,9 @@
         <!-- Info Box 1 in the top right -->
         <div class="info-box top-right">
             <div class="colored-div">
-            <h2>Data</h2>
+                <h2>Data</h2>
             </div>
-            <p>Area: 568,587 km2</p>
+            <p>Area: 568,587 km²</p>
             <p>Population: 87,458</p>
             <p>Capital: Bern</p>
             <p>Language: French</p>
@@ -46,29 +49,24 @@
         <!-- Info Box 2 in the bottom left -->
         <div class="info-box bottom-left">
             <div class="colored-div">
-                <h2>Weather <img src="images/667368_celcius_clouds_farenheit_sunshine_temerature_icon.png" alt="icon" class="icon"></h2> <!-- Icon and heading -->
+                <h2>Weather</h2>
             </div>
             <p>Temperature: 18°C</p>
             <p>Condition: Sunny</p>
             <p>Wind: 2 km/h</p>
-            <p id="windchill">Wind Chill: Calculating...</p> <!-- Placeholder for the wind chill -->
+            <p id="windchill">Wind Chill: Calculating...</p>
         </div>
     </div>
 
     <!-- Footer Section -->
-    <!-- Footer -->
-<footer>
-    <p>&copy; <span id="current-year"></span> Your Website | All Rights Reserved</p>
-    <p>Photo from <a href="https://www.pexels.com/" target="_blank">Pexels</a></p>
-    <p>Last modified: <span id="last-modified"></span></p>
-</footer>
+    <footer>
+        <p>&copy; <span id="current-year"></span> Your Website | All Rights Reserved</p>
+        <p>Photo from <a href="https://www.pexels.com/" target="_blank">Pexels</a></p>
+        <p>Last modified: <span id="last-modified"></span></p>
+    </footer>
 
-<!-- Load JavaScript after DOM has been parsed -->
-<script src="scripts/place.js" defer></script>
+    <!-- Load JavaScript after DOM has been parsed -->
+    <script src="scripts/place.js" defer></script>
 
 </body>
 </html>
-
-
-
-
