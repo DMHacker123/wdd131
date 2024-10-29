@@ -276,6 +276,13 @@ figcaption {
     font-style: italic;
 }
 
+/* Hide the hamburger button on larger screens */
+@media (min-width: 1024px) {
+    #hamburgerButton {
+        display: none !important; /* Force hide */
+    }
+}
+
 /* Footer styling */
 footer {
     background-color: #264653;
