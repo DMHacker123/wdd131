@@ -1,7 +1,157 @@
-/* Desktop view: Applied for devices with a min-width of 1024px */
+/* Mobile-first styles (default for mobile devices) */
 
-/* Page layout */
+/* Basic page layout */
 /* Apply the Google Fonts */
+/* Base styles for navigation */
+nav {
+    position: relative;
+}
+
+ul.nav-menu {
+    display: none; /* Hide navigation on mobile */
+    flex-direction: column;
+    background-color: #264653;
+    position: absolute;
+    top: 60px; /* Adjust to align with the height of your header */
+    width: 100%;
+    left: 0;
+    text-align: center;
+    padding: 0;
+}
+
+ul.nav-menu li {
+    list-style: none;
+    margin: 0;
+}
+
+ul.nav-menu li a {
+    padding: 1rem;
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color: #264653;
+    border-bottom: 1px solid #2a9d8f;
+}
+
+ul.nav-menu li a:hover {
+    background-color: #2a9d8f;
+}
+
+/* Hamburger menu button */
+.hamburger {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    display: block;
+    margin-right: 1rem;
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+
+/* Default: hide the nav menu and show the hamburger button */
+.hamburger-menu {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+#navMenu {
+    display: none; /* Hide navigation on mobile initially */
+    flex-direction: column;
+    background-color: #264653;
+    position: absolute;
+    top: 60px; /* Adjust to align with header height */
+    width: 100%;
+    left: 0;
+    text-align: center;
+    padding: 0;
+}
+
+#navMenu.show {
+    display: flex; /* Show menu when .show class is added */
+}
+
+/* Navigation items for mobile */
+#navMenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navMenu ul li a {
+    padding: 1rem;
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color: #264653;
+    border-bottom: 1px solid #2a9d8f;
+}
+
+#navMenu ul li a:hover {
+    background-color: #2a9d8f;
+}
+
+/* Larger screens: hide hamburger, show horizontal menu */
+@media screen and (min-width: 768px) {
+    .hamburger-menu {
+        display: none; /* Hide hamburger button on larger screens */
+    }
+    #navMenu {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+    }
+    #navMenu ul {
+        display: flex;
+        justify-content: space-around;
+    }
+    #navMenu ul li a {
+        background-color: transparent;
+        color: white;
+        padding: 1rem;
+    }
+    #navMenu ul li a:hover {
+        background-color: #2a9d8f;
+    }
+}
+
+/* Hide the hamburger button on larger screens */
+@media screen and (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+
+    /* Show the nav menu as a horizontal list on larger screens */
+    ul.nav-menu {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: transparent;
+    }
+
+    ul.nav-menu li a {
+        background-color: transparent;
+        border: none;
+        color: white;
+        padding: 1rem;
+    }
+
+    ul.nav-menu li a:hover {
+        background-color: #2a9d8f;
+    }
+}
+
 body {
     font-family: 'Roboto', sans-serif; /* Body font */
 }
@@ -16,83 +166,114 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
-    max-width: 1200px;
-    margin: 0 auto; /* Center the content on larger screens */
 }
 
 header {
     background-color: #2a9d8f;
     color: white;
-    padding: 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    text-align: center;
+    padding: 1rem;
 }
 
-header h1 {
+h1 {
     margin: 0;
-    font-size: 2.5rem; /* Increase font size for larger screens */
 }
 
 nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    justify-content: flex-end;
-    gap: 2rem; /* Space between navigation items */
+    justify-content: space-around;
+    background-color: #264653;
 }
 
 nav ul li {
-    list-style: none;
+    flex: 1;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
-    padding: 0.5rem 1rem;
-    transition: background-color 0.3s ease; /* Smooth hover effect */
+    padding: 1rem;
+    display: block;
+    text-align: center;
 }
 
 nav ul li a:hover {
-    background-color: #1d6f6d;
+    background-color: #2a9d8f;
 }
 
-/* Main content */
+/* Main content area */
 main {
-    padding: 2rem;
-    text-align: left; /* Align text to the left for readability on larger screens */
+    padding: 1rem;
+    text-align: center;
 }
 
 main h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-/* Image gallery: make it a grid */
+/* Gallery section */
 section {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
-    gap: 2rem; /* Spacing between grid items */
+    grid-template-columns: 1fr; /* Single column on small screens */
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
 }
 
+/* Responsive layout for larger screens */
+@media (min-width: 600px) {
+    section {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    section {
+        grid-template-columns: repeat(3, 1fr); /* Three columns on large screens */
+    }
+}
+
+/* Style for each figure */
 figure {
-    text-align: center;
     margin: 0;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: hidden;
+    text-align: center;
 }
 
 figure img {
     max-width: 100%;
     height: auto;
+    border-radius: 8px;
     display: block;
+    margin: 0 auto;
 }
 
 figcaption {
-    background-color: #f4f4f4;
-    padding: 0.5rem;
+    margin-top: 0.5rem;
     font-style: italic;
-    font-size: 1.1rem;
+    color: #333;
+}
+
+
+/* Image gallery */
+figure {
+    margin: 1rem auto;
+    text-align: center;
+    max-width: 100%;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-style: italic;
 }
 
 /* Footer styling */
@@ -100,10 +281,14 @@ footer {
     background-color: #264653;
     color: white;
     text-align: center;
-    padding: 2rem;
-    margin-top: 2rem;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 footer p {
     margin: 0.5rem 0;
 }
+
+/* Responsive design: tablet and above, handled by a separate stylesheet */
