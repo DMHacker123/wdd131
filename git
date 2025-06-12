@@ -1,425 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Temples</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Merriweather:wght@700&display=swap" rel="stylesheet">
-
-    <!-- Mobile First CSS -->
-    <link rel="stylesheet" href="styles/filtered-temples.css">
-
-    <!-- Desktop CSS: Applied for devices with a min-width of 1024px -->
-    /*<link rel="stylesheet" href="styles/temples-large.css" media="screen and (min-width: 1024px)">*/
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Darwin Matos Portfolio</title>
+  <link rel="stylesheet" href="../styles/final.css" />
 </head>
 <body>
-    <header>
-        <h1>Temples Album</h1>
-        <button id="hamburgerButton" class="hamburger-menu">
-            &#9776; <!-- Hamburger icon -->
-        </button>
-        
-        <nav id="navMenu">
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="old.html">Old</a></li>
-                <li><a href="new.html">New</a></li>
-                <li><a href="large.html">Large</a></li>
-                <li><a href="small.html">Small</a></li>
-            </ul>
-        </nav>
-        
-    </header>
+<header>
+  <div class="container">
+    <h1>Darwin Matos Portfolio</h1>
+    <button id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+    <nav id="navbar">
+      <ul class="nav-list">
+        <li><a href="../index.html" class="active">Home</a></li>
+        <li><a href="https://github.com/DMHacker123" class="active" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-    <main>
-        <section id="temple-gallery">
-            <!-- Temple cards will be inserted here -->
-        </section>
-    </main>
-    
 
-    <footer>
-        <!-- Dynamic Year and Static Information -->
-        <p>&copy; <span id="currentYear"></span> Darwin Matos. All rights reserved.</p>
-        <p>Contact: <a href="mailto:matosalvarezdm@hotmail.com">matosalvarezdm@hotmail.com</a></p>
-        <p>Last modified: <span id="last-modified"></span></p>
-    </footer>
-    <!-- JavaScript to dynamically insert the current year -->
-    <script>
-        document.getElementById("currentYear").textContent = new Date().getFullYear();
-    </script>
-    <!-- Deferred JavaScript file -->
-    <script src="script/filtered-temples.js" defer></script>
+  <main class="container">
+    <section>
+      <h2>Welcome</h2>
+      <p>Hi, I'm <strong>Darwin Matos</strong>—a passionate web developer focused on creating dynamic, responsive, and user-friendly websites. This portfolio highlights some of my key projects, technical skills, and professional experience.</p>
+    </section>
+
+    <section>
+      <h2>About Me</h2>
+      <p>I specialize in front-end development using HTML, CSS, and JavaScript. My work focuses on clean design, accessibility, and performance. I’m currently pursuing opportunities to grow as a developer while contributing to meaningful digital experiences.</p>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>HTML5, CSS3, JavaScript (ES6+)</li>
+        <li>Responsive Web Design</li>
+        <li>Accessibility & Usability Standards</li>
+        <li>Git & GitHub</li>
+        <li>Basic Node.js and APIs</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>Reach out through <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer">LinkedIn</a> or explore my projects on <a href="https://github.com/DMHacker123" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> | Built by Darwin Matos</p>
+    </div>
+  </footer>
+
+  <script src="../scripts/final.js"></script>
 </body>
 </html>
-****************************************************************
-/* Mobile-first styles (default for mobile devices) */
 
-/* Basic page layout */
-/* Apply the Google Fonts */
-/* Base styles for navigation */
-nav {
-    position: relative;
-}
-
-ul.nav-menu {
-    display: none; /* Hide navigation on mobile */
-    flex-direction: column;
-    background-color: #264653;
-    position: absolute;
-    top: 60px; /* Adjust to align with the height of your header */
-    width: 100%;
-    left: 0;
-    text-align: center;
-    padding: 0;
-}
-
-ul.nav-menu li {
-    list-style: none;
-    margin: 0;
-}
-
-ul.nav-menu li a {
-    padding: 1rem;
-    display: block;
-    text-decoration: none;
-    color: white;
-    background-color: #264653;
-    border-bottom: 1px solid #2a9d8f;
-}
-
-ul.nav-menu li a:hover {
-    background-color: #2a9d8f;
-}
-
-/* Hamburger menu button */
-.hamburger {
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-    display: block;
-    margin-right: 1rem;
-    position: absolute;
-    right: 0;
-    top: 10px;
-}
-
-/* Hide the hamburger button on larger screens */
-@media screen and (min-width: 768px) {
-    .hamburger {
-        display: none;
-    }
-
-    /* Show the nav menu as a horizontal list on larger screens */
-    ul.nav-menu {
-        display: flex;
-        position: static;
-        flex-direction: row;
-        justify-content: space-around;
-        background-color: transparent;
-    }
-
-    ul.nav-menu li a {
-        background-color: transparent;
-        border: none;
-        color: white;
-        padding: 1rem;
-    }
-
-    ul.nav-menu li a:hover {
-        background-color: #2a9d8f;
-    }
-}
-
-body {
-    font-family: 'Roboto', sans-serif; /* Body font */
-}
-
-/* Header styling */
-header h1 {
-    font-family: 'Merriweather', serif; /* Heading font */
-}
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-header {
-    background-color: #2a9d8f;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-}
-
-h1 {
-    margin: 0;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-around;
-    background-color: #264653;
-}
-
-nav ul li {
-    flex: 1;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 1rem;
-    display: block;
-    text-align: center;
-}
-
-nav ul li a:hover {
-    background-color: #2a9d8f;
-}
-
-/* Main content area */
-main {
-    padding: 1rem;
-    text-align: center;
-}
-
-main h2 {
-    margin-bottom: 1rem;
-}
-
-/* Image gallery */
-figure {
-    margin: 1rem auto;
-    text-align: center;
-    max-width: 100%;
-}
-
-figure img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-figcaption {
-    margin-top: 0.5rem;
-    font-style: italic;
-}
-
-/* Styling for the temple cards */
-.temple-card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 1rem;
-    margin-bottom: 2rem;
-    background-color: #f9f9f9;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.temple-card h3 {
-    font-family: 'Merriweather', serif;
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.temple-card p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    color: #555;
-    margin: 0.5rem 0;
-}
-
-.temple-card img {
-    max-width: 100%;
-    border-radius: 8px;
-    margin-top: 1rem;
-}
-
-.show {
-    display: block;
-}
-
-/* Footer styling */
-footer {
-    background-color: #264653;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-footer p {
-    margin: 0.5rem 0;
-}
-
-/* Responsive design: tablet and above, handled by a separate stylesheet */
-*******************************************************************
-// temples.js
-
-document.addEventListener('DOMContentLoaded', function() {
-    const hamburgerButton = document.getElementById('hamburgerButton');
-    const navMenu = document.getElementById('navMenu');
-
-    hamburgerButton.addEventListener('click', function() {
-        navMenu.classList.toggle('show');
-    });
-});
-
-
-
-function updateFooter() {
-    // Get the current year and display it
-    const currentYearElement = document.getElementById('current-year');
-    if (currentYearElement) {  // Check if element exists
-        const currentYear = new Date().getFullYear();
-        currentYearElement.textContent = currentYear;
-    }
-
-    // Get the last modified date of the page
-    const lastModifiedElement = document.getElementById('last-modified');
-    if (lastModifiedElement) {  // Check if element exists
-        const lastModifiedDate = document.lastModified;
-        lastModifiedElement.textContent = lastModifiedDate;
-    }
-}
-function displayTemples() {
-    const templeSection = document.querySelector('main section'); // The section where the temples will be displayed
-
-    temples.forEach(temple => {
-        // Create the card element to hold temple info
-        const card = document.createElement('div');
-        card.classList.add('temple-card'); // Add a class for styling
-
-        // Create and append the temple name
-        const templeName = document.createElement('h3');
-        templeName.textContent = temple.templeName;
-        card.appendChild(templeName);
-
-        // Create and append the temple location
-        const location = document.createElement('p');
-        location.textContent = `Location: ${temple.location}`;
-        card.appendChild(location);
-
-        // Create and append the dedication date
-        const dedicated = document.createElement('p');
-        dedicated.textContent = `Dedicated: ${temple.dedicated}`;
-        card.appendChild(dedicated);
-
-        // Create and append the temple area
-        const area = document.createElement('p');
-        area.textContent = `Area: ${temple.area.toLocaleString()} sq ft`;
-        card.appendChild(area);
-
-        // Create and append the temple image
-        const img = document.createElement('img');
-        img.src = temple.imageUrl;
-        img.alt = `${temple.templeName} Temple`;
-        img.loading = 'lazy'; // Enable native lazy loading
-        card.appendChild(img);
-
-        // Append the card to the temple section
-        templeSection.appendChild(card);
-    });
-}
-
-
-
-updateFooter();
-alert('JavaScript is working!');
-
-
-const temples = [
-    {
-      templeName: "Aba Nigeria",
-      location: "Aba, Nigeria",
-      dedicated: "2005, August, 7",
-      area: 11500,
-      imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
-    },
-    {
-      templeName: "Manti Utah",
-      location: "Manti, Utah, United States",
-      dedicated: "1888, May, 21",
-      area: 74792,
-      imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg"
-    },
-    {
-      templeName: "Payson Utah",
-      location: "Payson, Utah, United States",
-      dedicated: "2015, June, 7",
-      area: 96630,
-      imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
-    },
-    {
-      templeName: "Yigo Guam",
-      location: "Yigo, Guam",
-      dedicated: "2020, May, 2",
-      area: 6861,
-      imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"
-    },
-    {
-      templeName: "Washington D.C.",
-      location: "Kensington, Maryland, United States",
-      dedicated: "1974, November, 19",
-      area: 156558,
-      imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
-    },
-    {
-      templeName: "Lima Perú",
-      location: "Lima, Perú",
-      dedicated: "1986, January, 10",
-      area: 9600,
-      imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg"
-    },
-    {
-      templeName: "Mexico City Mexico",
-      location: "Mexico City, Mexico",
-      dedicated: "1983, December, 2",
-      area: 116642,
-      imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
-    },
-    {
-        templeName: "Salt Lake City",
-        location: "Salt Lake City, Utah, United States",
-        dedicated: "1893, April, 6",
-        area: 253000,
-        imageUrl:
-        "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-city/400x250/salt-lake-temple.jpg"
-      },
-      {
-        templeName: "Brigham City Utah",
-        location: "Brigham City, Utah, United States",
-        dedicated: "2012, May, 6",
-        area: 85000,
-        imageUrl:
-        "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/brigham-city/400x250/brigham-city-temple.jpg"
-      },
-      {
-        templeName: "Denver Colorado",
-        location: "Denver, Colorado, United States",
-        dedicated: "1959, February, 2",
-        area: 185000,
-        imageUrl:
-        "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/denver-colorado/400x250/denver-colorado-temple.jpg"
-      },
-    // Add more temple objects here...
-  ];
